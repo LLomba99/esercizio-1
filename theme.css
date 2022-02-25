@@ -1,13 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Shizuru&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
 
 html {
   line-height: 1.15; 
   -webkit-text-size-adjust: 100%; 
-  font-family: Shizuru;
+  font-family: Comfortaa;
+  font-size: 1.3em;
+}
+
+code {
+  font-size: 1.5em;
 }
 
 body {
-  margin: 10em;
+  margin: 5em;
 }
 
 main {
@@ -15,7 +20,7 @@ main {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 3em;
   margin: 0.67em 0;
 }
 
@@ -23,4 +28,8 @@ hr {
   box-sizing: content-box; 
   height: 0; 
   overflow: visible; 
+}
+
+li {
+  line-height: 1.7em;
 }
