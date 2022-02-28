@@ -1,18 +1,71 @@
 <html>
+
 <head>
-<link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="theme.css">
 </head>
+
 <body>
-    <h1><center>Version control: esercizio 1</center></h1>
-    <hr/>
-    <h2>Esecitazioni con il merge</h2>
-    <p>Per ogni 'task', creare un feature branch ed effettuare un <code>merge</code> su branch <code>main</code> al termine di ciascun task.</p>
+    <h1>
+        <center>Version control: esercizio 1</center>
+    </h1>
+    <hr />
+    <h2>Parte 1</h2>
+    <p>Per ogni 'task', creare un feature branch ed effettuare un <code>merge</code> su branch <code>main</code> al
+        termine di ciascun task.</p>
     <ol>
-        <li>Aggiungere 3 paragrafi al file <code>index.html</code> su tre distinti feature branch</li>
-        <li>Effettuare un merge dei 3 branch su <code>main</code></li>
-        <li>Aggiungere un link alla pagina <code>elenco-studenti.html</code></li>
+        <li>Lavorare sul branch <code>main</code></li>
+        <li>Aggiungere 3 paragrafi in coda al file <code>menu.html</code> su tre distinti feature branch:</li>
+        <ol>
+            <li>Paragrafo A sul branch <code>feature-par-a</code></li>
+            <li>Paragrafo B sul branch <code>feature-par-b</code></li>
+            <li>Paragrafo C sul branch <code>feature-par-c</code></li>
+        </ol>
+        <li>Verificare il corretto allineamento di <code>main</code></li>
+        <li>Allineare <code>origin</code></li>
+        <li>Notare che su <code>origin</code> non sono stati aggiunti i feature branch!</li>
+        <li>Per effettuare il push anche dei nuovi feature branch occorre:</li>
+        <ol>
+            <li>Spostarsi sul feature branch con <code>git checkout feature-par-X</code></li>
+            <li>Provando a fare un <code>git push</code> git notifica che occorre impostare l'upstream</li>
+            <li>Lanciare il comando <code>git push --set-upstream origin feature-par-X</code></li>
+            <li>Verificare che su <code>origin</code> ora e' presente il nuovo branch con <code>git branch -a</code>
+            </li>
+        </ol>
+    </ol>
+    <h2>Parte 2</h2>
+    <p>Ora ramificheremo il repo a 2 livelli per implementare una 'sottofeature' dentro una feature</p>
+    <ol>
+        <li>Creare un nuovo branch <code>feature-elenco-studenti</code>, e lavorare su questo branch</li>
+        <li>In coda a <code>menu.html</code> aggiungere un link alla pagina <code>elenco-studenti.html</code></li>
         <li>Creare la pagina <code>elenco-studenti.html</code> con un'intestazione ed una lista vuota</li>
-        <li>Ogni studente crea una nuova pagina con un testo arbitrario ed aggiunge all'elenco un link a questa nuova pagina</li>
+        <li>Ogni studente:</li>
+        <ol>
+            <li>Staccare dei nuovi branch da <code>feature-elenco-studenti</code> chiamati
+                <code>feature-pagina-&lt;nome-cognome&gt;</code>
+            </li>
+            <li>Creare una pagina personale ed il relativo link nella lista dell'elenco studenti: attenzione
+                effettuare 2 commit distinti per ciascuna operazione</li>
+            <li>Riallineare il branch <code>feature-elenco-studenti</code></li>
+        </ol>
+        <li>Controllare che <code>feature-elenco-studenti</code> funzioni correttamente</li>
+        <li>Riallineare <code>main</code> a <code>feature-elenco-studenti</code></li>
+        <li>Allineare <code>origin</code></li>
+    </ol>
+
+    <h2>Parte 3</h2>
+    <p>Gestione dei conflitti</p>
+    <ol>
+        <li>Riallineare il branch <code>alternative-font</code> al branch <code>main</code> e verificare che funzioni
+            correttamente</li>
+        <li>Tornare al branch <code>main</code> e rilasciare la VERSIONE 1 sul branch <code>ver1</code></li>
+        <li>Allineare <code>origin</code></li>
+        <li>Ogni studente crea un branch locale ed effettua una modifica sul file <code>menu.html</code></li>
+        <li>Effettuare il fetch/pull del branch main, effettuare il merge sul branch main appena aggiornato, fare il
+            merge ed il push.</li>
+        <li>Al termine di tutte le modifiche su <code>main</code> effettuare un riallineamento da <code>origin</code> e
+            controllare le differenze con il proprio branch locale (verificare che le modifiche siano state mantenute).
+        </li>
+        <li>Effettuare eventuali correzioni, ed effettuare un push</li>
     </ol>
 </body>
 
